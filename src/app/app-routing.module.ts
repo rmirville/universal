@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'stuff/add',
+    loadChildren: () => import('../domains/stuff/feature-add-stuff/feature-add-stuff.module').then(m => m.FeatureAddStuffModule),
+  },
+  {
+    path: 'things/add',
+    loadChildren: () => import('../domains/things/feature-add-things/feature-add-things.module').then(m => m.FeatureAddThingsModule),
+  },
+  {
+    path: '',
+    redirectTo: 'stuff/add',
+    pathMatch: 'full',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

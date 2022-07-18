@@ -1,0 +1,5 @@
+<button (click)="onAddThings()">Add Things</button>
+
+<ul *ngIf="view?.things?.length">
+  <li *ngFor="let item of view?.things">{{ item }}</li>
+</ul>
