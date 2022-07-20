@@ -5,6 +5,7 @@ const routes: Routes = [
   {
     path: 'stuff/add',
     loadChildren: () => import('../domains/stuff/feature-add-stuff/feature-add-stuff.module').then(m => m.FeatureAddStuffModule),
+    title: 'Add Stuff | Stuff and Things Manager',
   },
   {
     path: 'things/add',
