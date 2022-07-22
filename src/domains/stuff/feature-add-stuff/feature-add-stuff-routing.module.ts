@@ -6,6 +6,7 @@ import { AddStuffPageComponent } from "./pages/add-stuff/add-stuff.page.componen
 const routes: Routes = [
   {
     path: '',
+    title: 'Add Stuff | Stuff and Things Manager',
     component: AddStuffPageComponent,
   }
 ];
